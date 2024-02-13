@@ -1,0 +1,62 @@
+.tool {
+    padding-top: 126px;
+    
+    &__title {
+        position: relative;
+        text-align: center;
+        
+        @include before_circle;
+        &::before {
+            left: 50%;
+            transform: translateX(-50%);
+
+        }
+
+    }
+    &__subtitle {
+        text-align: center;
+    }
+    &__devider {
+        margin: 0 auto;
+        margin-top: 25px;
+    }
+    &__wrapper {
+        padding: 0 10px;
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 270px);
+        grid-template-rows: repeat(2, minmax(270px, auto));
+        gap:13px;
+        grid-auto-columns: repeat(4, 270px);
+        grid-auto-rows: minmax(270px, auto);
+        
+    }
+    &__item {
+        border: 1px solid #000;
+        padding-left: 30px;
+        // padding-top: 115px;
+        &-name {
+            height: 115px;
+            position: relative;
+        }
+        &-text {
+            width: 211px;
+            
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 18px;
+            text-align: left;
+
+        }
+        &-img {
+            position: absolute;
+            bottom: 20px;
+            max-width: 65px;
+            max-height: 162px;
+        }
+        &-title {
+            margin-bottom: 15px;
+        }
+
+    }
+}
